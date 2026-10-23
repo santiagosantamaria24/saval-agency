@@ -65,7 +65,7 @@ h1,h2,h3,p{margin:0}
 .hero h1{position:absolute;left:var(--m);top:17%;z-index:1;font-size:var(--t-xxl);line-height:.84}
 .hero h1 span{display:block}
 .hero-photo{position:absolute;z-index:2;left:70%;width:25vw;aspect-ratio:3/4;bottom:-5%;transform:rotate(5deg);transform-origin:50% 100%;border-radius:999px 999px 0 0;overflow:hidden;background:var(--black);margin:0}
-.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero-photo video{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
 .hero-band{position:relative;background:var(--black);color:var(--bone);display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 var(--m)}
 .hero-band p{max-width:46ch;font-size:var(--t-m);line-height:1.45}
 .hero-band .btn{flex:none}
@@ -239,9 +239,9 @@ footer{background:var(--bone);padding:clamp(112px,9vw,128px) var(--m) 28px}
 .js .rise{opacity:0;transform:translateY(24px)}
 .js .rise.in{opacity:1;transform:none;transition:opacity .7s var(--ease-out), transform .7s var(--ease-out);transition-delay:var(--d,0ms)}
 .js .hero-photo{clip-path:inset(100% 0 0 0)}
-.js .hero-photo img{transform:scale(1.12)}
+.js .hero-photo video{transform:scale(1.12)}
 .hero-photo.open{clip-path:inset(0 0 0 0);transition:clip-path 1.1s var(--ease-out) .25s}
-.js .hero-photo.open img{transform:scale(1);transition:transform 1.4s var(--ease-out) .25s}
+.js .hero-photo.open video{transform:scale(1);transition:transform 1.4s var(--ease-out) .25s}
 .js .hero h1 span{transform:translateY(40px);opacity:0}
 .hero.ready h1 span{transform:none;opacity:1;transition:transform .8s var(--ease-out), opacity .8s var(--ease-out)}
 .hero.ready h1 span:nth-child(2){transition-delay:.08s}
@@ -253,7 +253,7 @@ footer{background:var(--bone);padding:clamp(112px,9vw,128px) var(--m) 28px}
   html{scroll-behavior:auto}
   .js .rise,.js .hero h1 span{opacity:1 !important;transform:none !important}
   .js .hero-photo{clip-path:none}
-  .js .hero-photo img{transform:none}
+  .js .hero-photo video{transform:none}
   .js .blocks div{transform:none}
   *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important}
 }
@@ -340,7 +340,7 @@ footer{background:var(--bone);padding:clamp(112px,9vw,128px) var(--m) 28px}
     <div class="hero-field">
       <h1 id="hero-title" class="display"><span>Se ve.</span><span>Se vende.</span></h1>
       <figure class="hero-photo">
-        <img src="img/taqueria-noche.webp" width="1600" height="972" alt="Taquería de noche llena de clientes, con los cocineros despachando detrás de la barra" fetchpriority="high">
+        <video poster="img/hero-poster.webp" width="720" height="1280" autoplay muted loop playsinline preload="auto" aria-label="Animación: una tienda se conecta con su página web y su perfil, y cobra vida"><source src="img/hero.webm" type="video/webm"><source src="img/hero.mp4" type="video/mp4"></video>
       </figure>
     </div>
     <div class="hero-band">
@@ -438,21 +438,21 @@ Lo vi en tu página.<time>ahora</time></p>
         <button class="stage-btn" type="button" aria-expanded="false" aria-controls="st2"><span class="sliver-name">Marca</span></button>
         <div class="stage-inner" id="st2">
           <div class="stage-text"><h3>Marca</h3><div><p class="day">De 1 a 2 semanas</p><p>Logo, colores y tipografía, más tus perfiles listos: foto, portadas y una biografía que dice qué vendes y cómo pedir.</p></div></div>
-          <div class="stage-pic"><img src="img/vitrina.webp" width="1000" height="1310" alt="Vitrina de una tienda con su letrero iluminado, en una calle mojada" loading="lazy"></div>
+          <div class="stage-pic"><img src="img/tienda-tenis.webp" width="1400" height="1050" alt="Tienda de tenis y ropa urbana con su letrero de neón encendido" loading="lazy"></div>
         </div>
       </div>
       <div class="stage">
         <button class="stage-btn" type="button" aria-expanded="false" aria-controls="st3"><span class="sliver-name">Landing</span></button>
         <div class="stage-inner" id="st3">
           <div class="stage-text"><h3>Landing</h3><div><p class="day">De 7 a 10 días</p><p>Subimos tus productos o servicios con precios y el botón de WhatsApp, y te dejamos el link listo para tu bio.</p></div></div>
-          <div class="stage-pic"><img src="img/barberia-cuba.webp" width="1200" height="900" alt="Barbería de barrio con sillones antiguos y barberos atendiendo" loading="lazy"></div>
+          <div class="stage-pic"><img src="img/tienda-tecnologia.webp" width="1400" height="933" alt="Tienda de accesorios de tecnología con sus productos en exhibición" loading="lazy"></div>
         </div>
       </div>
       <div class="stage">
         <button class="stage-btn" type="button" aria-expanded="false" aria-controls="st4"><span class="sliver-name">Contenido</span></button>
         <div class="stage-inner" id="st4">
           <div class="stage-text"><h3>Contenido</h3><div><p class="day">Cada mes, si quieres</p><p>Grabamos en tu negocio y te entregamos TikToks y fotos listos para subir, para que siempre haya algo nuevo que mostrar.</p></div></div>
-          <div class="stage-pic"><img src="img/pastor.webp" width="1200" height="900" alt="Taquero cortando carne al pastor en un puesto de la calle" loading="lazy"></div>
+          <div class="stage-pic"><img src="img/cafeteria.webp" width="1400" height="1050" alt="Cafetería llena de clientes, con el menú escrito en el tablero" loading="lazy"></div>
         </div>
       </div>
     </div>
@@ -551,7 +551,7 @@ Lo vi en tu página.<time>ahora</time></p>
     <span>© 2026 Saval Agency</span>
     <a class="btn btn-black" data-wa="Hola Saval, quiero información para mi negocio." href="https://wa.me/573136992754?text=Hola%20Saval%2C%20quiero%20informaci%C3%B3n%20para%20mi%20negocio.">Escríbenos</a>
   </div>
-  <p class="credits">Fotos: <a href="https://commons.wikimedia.org/wiki/File:A_brisk_trade_at_Taqueria_Sevilla.jpg">“A brisk trade at Taqueria Sevilla”</a>, <a href="https://commons.wikimedia.org/wiki/File:Hair_coloring,_Barbershop_From_Iran_15.jpg">“Hair coloring, Barbershop From Iran 15”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=101806237">“Air Jordan 1 Banned”</a> por HI 622, <a href="https://commons.wikimedia.org/w/index.php?curid=115170747">“Nike Air Max 90”</a> por Mfagoaguna1, <a href="https://commons.wikimedia.org/wiki/File:Adidas_Superstar_shoes_pair.jpg">“Adidas Superstar shoes pair”</a>, <a href="https://commons.wikimedia.org/wiki/File:Quesabirria_at_Taqueria_La_Hacienda,_Sonoma,_California_-_Sarah_Stierch.jpg">“Quesabirria at Taqueria La Hacienda”</a> por Sarah Stierch, <a href="https://commons.wikimedia.org/wiki/File:Picture_of_crispy_taco_from_taqueria_in_sacramento,_ca.jpg">“Crispy taco from taqueria in Sacramento”</a>, <a href="https://commons.wikimedia.org/wiki/File:In-N-Out_Burger_cheeseburgers.jpg">“In-N-Out Burger cheeseburgers”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=87453563">“Barbershop in Cancun”</a>, <a href="https://commons.wikimedia.org/wiki/File:Barbershop_in_Santiago_de_Cuba_-_Cuba.jpg">“Barbershop in Santiago de Cuba”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=139261820">“Sneaker Mania”</a> por Vesan99, <a href="https://commons.wikimedia.org/wiki/File:Taqueria.jpg">“Taqueria”</a>. Vía Wikimedia Commons, con licencias CC BY, CC BY-SA o CC0; detalle de autores y licencias en cada enlace.</p>
+  <p class="credits">Fotos: <a href="https://commons.wikimedia.org/wiki/File:Hair_coloring,_Barbershop_From_Iran_15.jpg">“Hair coloring, Barbershop From Iran 15”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=101806237">“Air Jordan 1 Banned”</a> por HI 622, <a href="https://commons.wikimedia.org/w/index.php?curid=115170747">“Nike Air Max 90”</a> por Mfagoaguna1, <a href="https://commons.wikimedia.org/wiki/File:Adidas_Superstar_shoes_pair.jpg">“Adidas Superstar shoes pair”</a>, <a href="https://commons.wikimedia.org/wiki/File:Quesabirria_at_Taqueria_La_Hacienda,_Sonoma,_California_-_Sarah_Stierch.jpg">“Quesabirria at Taqueria La Hacienda”</a> por Sarah Stierch, <a href="https://commons.wikimedia.org/wiki/File:Picture_of_crispy_taco_from_taqueria_in_sacramento,_ca.jpg">“Crispy taco from taqueria in Sacramento”</a>, <a href="https://commons.wikimedia.org/wiki/File:In-N-Out_Burger_cheeseburgers.jpg">“In-N-Out Burger cheeseburgers”</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=87453563">“Barbershop in Cancun”</a>, <a href="https://commons.wikimedia.org/wiki/File:Barbershop_in_Santiago_de_Cuba_-_Cuba.jpg">“Barbershop in Santiago de Cuba”</a>. Vía Wikimedia Commons, con licencias CC BY, CC BY-SA o CC0; detalle de autores y licencias en cada enlace.</p>
 </footer>
 
 <script>
@@ -575,7 +575,8 @@ Lo vi en tu página.<time>ahora</time></p>
   document.querySelectorAll(".rise, .blocks").forEach(function(el){ io.observe(el); });
 
   // Slow drift on the hero photograph
-  var heroImg = photo.querySelector("img");
+  var heroImg = photo.querySelector("video");
+  if(reduce) heroImg.pause();
   if(!reduce){
     var ticking = false;
     addEventListener("scroll", function(){
